@@ -15,7 +15,7 @@ steps:
   displayName: 'Sending Image to OCIR'
 
 - script: |
-    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)" --accept-all-defaults
     mkdir -p $HOME/.kube
     oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaaaezdonldgvtgiojrgq2gim3bgnrwcyjsgezdcnjzgc2tkm3egjrw --file $HOME/.kube/config --region us-ashburn-1
     export KUBECONFIG=$HOME/.kube/config
