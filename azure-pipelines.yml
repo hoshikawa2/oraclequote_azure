@@ -6,7 +6,7 @@ variables:
   imageName: 'oraclequote_azure:latest'
 
 steps:
-- script: docker build --no-cache -f Dockerfile -t $(ocir)/$(repo)/$(imageName) .
+- script: docker build --no-cache -f Dockerfile -t $(ocir)/$(tenancy)/$(repo)/$(imageName) .
   displayName: 'Building Docker Image'
 
 - script: |
