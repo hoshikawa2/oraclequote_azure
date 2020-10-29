@@ -1,0 +1,16 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+variables:
+  buildConfiguration: 'Release'
+  imageName: 'oraclequote_azure:latest'
+
+steps:
+- script: docker build --no-cache -f Dockerfile -t $(dockerId)/$(imageName) .
+  displayName: 'Building Docker Image'
+
+- script: |
+    docker login $(ocir) -u $(dockerUser) -p $(dockerPassword)
+    docker push $(ocir)/$(tenancy)/$(repo)/$(imageName)
+  displayName: 'Sending Image to OCIR'
+  
