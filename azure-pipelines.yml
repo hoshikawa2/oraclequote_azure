@@ -13,3 +13,16 @@ steps:
     docker login https://$(ocir) -u $(dockerUser) -p "$(dockerPassword)"
     docker push $(ocir)/$(tenancy)/$(repo)/$(imageName)
   displayName: 'Sending Image to OCIR'
+
+- script: |
+    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+    mkdir -p $HOME/.kube
+    oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaaaezdonldgvtgiojrgq2gim3bgnrwcyjsgezdcnjzgc2tkm3egjrw --file $HOME/.kube/config --region us-ashburn-1
+    export KUBECONFIG=$HOME/.kube/config
+    kubectl config view
+    kubectl get nodes
+    kubectl replace -f ./callPDFReport/kubernetes.yaml --force
+    sleep 120
+    kubectl get services callpdfreport-service
+    kubectl get pods
+    kubectl describe pods
