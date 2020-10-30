@@ -54,31 +54,31 @@ steps:
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
 
     echo '-----BEGIN RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
-    echo 'MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz
-DTuc2n7j+lcYgGF4U1o1w19TeOlDn4rZwGNJYtKCmbZlKRN3MTtI4DrDerP8VyNo
-FZviOjxkD322xt7GzRB+BRUZM7s0ZjF78110F/qfpYZy3DXCs5ugSZ6YCrEjJ9gu
-SQENN8CIEoftOtSUFyVKffdbYXZfIrEWV4DxWye0/J5Zp2RuezDoC/c5kY5ABWL9
-0KV+PSf4G/eqzezKzl5m71dxL0Qck4YG5yVegmrb1OCSpEzH/ce5Ainy5AGXI4aL
-WCCvrhXLrDFikfYQuJYdO/dAfhn/zPn/kO9efQIDAQABAoIBAQCyh2uI6zam9FbL
-/yPrMtgMiYYZq8tVbRfRNj3NN/F3JVtg2d3n0mxELxmre4Q2LHeKnsz2yJCwp2bN
-h0Is7LY31xy0C5S2v/JaQhLXpS38GZJ9O3ZI7OgqMmdDEtF52ExQ0PRXP3MG70vn
-2x9k1j+91iOXAxDCA2bwnK500FDdrAQ6sl6uEQgf5GOOSy1/MbLoZGnxuQgyhd0R
-YvIjAhhb0wpDTtlIOFsmoiZmlGvWXEIm4NBkDc0VN7mQWPrBZ6vgVj8TOp3x7jEr
-OBdJKA2H2fb8z2K9wGR9cdfB1eh3Aa6/oL36ktJJVB73ZpmP2/nOKXEUbmeQfBxM
-mOr2l20ZAoGBAOKSJ6IF/TmEZDVNLGkGDMguZzOoyiWvgY7J/0zNCCjoTu9eNpTx
-jD2/8KjuycNiqorWVlo/jWiM1srYaU4/PmDmky3wmYkcS0KwWr4DVN6nz+enON8D
-MDjq4jf/IaKSj+85oGtvVuF1YVDjCFGzV3OJd24osJoyQPhqJR8cOeynAoGBANZ2
-x8puOV3mlw65onelWvh2WLI2hOe0EvdnjcybJBsPiLwXHtjsOb0qZZPse/ftp1AA
-3SXq/UjmQumAxw3MSysA/mpEw0zy0aJBjbNic2tUg9FsNuqApZt3kovzxHPH9Ccj
-0abktOuurp1GPh4fxiKtjIri7+KHIzTqsCp9Ugw7AoGAcnygAkM8fb/kUvq4Iimo
-c87e3z+/ReO1d82ib9B6+xDIMjRNKF4WG23N0c83rL9Cpf1AjUHn1pi0QLOyIpPa
-lWRtop0dOCdP8Fbkw3czf38Uk13wYuBdkaU+wkTtXhTpHlzkLuWH5U1G63SNU5tn
-6T3hV4zAEGqsYdpg/6NnsakCgYEArNeZ+UmQLl9zCskNaUP45xnqLebGgj6csovg
-ui+mj7CbUIuJruXjOtN6fhcvagc8uruXf8G9VA1PjATfZ/1n70ajxF2a0N85mH0g
-iJwlzTCV9Cg0shXwYjWiA+z4PR+/Y/P4OXtFXFSyIcrEsV6GPtiD1kNDddvXwgQK
-6pOJlpUCgYEAr9G1JJQzp6YEAfp3UdrKijBTbfl0v2VOx3Yka6moF4IORODLQbfy
-HnEOaDFPf060ef9HEGc3Ki0V1XcZucM7mGosh9ne29onzinExDLjIW2w7hzNcfbW
-fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
+    echo 'MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'DTuc2n7j+lcYgGF4U1o1w19TeOlDn4rZwGNJYtKCmbZlKRN3MTtI4DrDerP8VyNo' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'FZviOjxkD322xt7GzRB+BRUZM7s0ZjF78110F/qfpYZy3DXCs5ugSZ6YCrEjJ9gu' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'SQENN8CIEoftOtSUFyVKffdbYXZfIrEWV4DxWye0/J5Zp2RuezDoC/c5kY5ABWL9' >> /home/vsts/.oci/oci_api_key.pem
+    printf '0KV+PSf4G/eqzezKzl5m71dxL0Qck4YG5yVegmrb1OCSpEzH/ce5Ainy5AGXI4aL' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'WCCvrhXLrDFikfYQuJYdO/dAfhn/zPn/kO9efQIDAQABAoIBAQCyh2uI6zam9FbL' >> /home/vsts/.oci/oci_api_key.pem
+    printf '/yPrMtgMiYYZq8tVbRfRNj3NN/F3JVtg2d3n0mxELxmre4Q2LHeKnsz2yJCwp2bN' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'h0Is7LY31xy0C5S2v/JaQhLXpS38GZJ9O3ZI7OgqMmdDEtF52ExQ0PRXP3MG70vn' >> /home/vsts/.oci/oci_api_key.pem
+    printf '2x9k1j+91iOXAxDCA2bwnK500FDdrAQ6sl6uEQgf5GOOSy1/MbLoZGnxuQgyhd0R' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'YvIjAhhb0wpDTtlIOFsmoiZmlGvWXEIm4NBkDc0VN7mQWPrBZ6vgVj8TOp3x7jEr' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'OBdJKA2H2fb8z2K9wGR9cdfB1eh3Aa6/oL36ktJJVB73ZpmP2/nOKXEUbmeQfBxM' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'mOr2l20ZAoGBAOKSJ6IF/TmEZDVNLGkGDMguZzOoyiWvgY7J/0zNCCjoTu9eNpTx' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'jD2/8KjuycNiqorWVlo/jWiM1srYaU4/PmDmky3wmYkcS0KwWr4DVN6nz+enON8D' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'MDjq4jf/IaKSj+85oGtvVuF1YVDjCFGzV3OJd24osJoyQPhqJR8cOeynAoGBANZ2' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'x8puOV3mlw65onelWvh2WLI2hOe0EvdnjcybJBsPiLwXHtjsOb0qZZPse/ftp1AA' >> /home/vsts/.oci/oci_api_key.pem
+    printf '3SXq/UjmQumAxw3MSysA/mpEw0zy0aJBjbNic2tUg9FsNuqApZt3kovzxHPH9Ccj' >> /home/vsts/.oci/oci_api_key.pem
+    printf '0abktOuurp1GPh4fxiKtjIri7+KHIzTqsCp9Ugw7AoGAcnygAkM8fb/kUvq4Iimo' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'c87e3z+/ReO1d82ib9B6+xDIMjRNKF4WG23N0c83rL9Cpf1AjUHn1pi0QLOyIpPa' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'lWRtop0dOCdP8Fbkw3czf38Uk13wYuBdkaU+wkTtXhTpHlzkLuWH5U1G63SNU5tn' >> /home/vsts/.oci/oci_api_key.pem
+    printf '6T3hV4zAEGqsYdpg/6NnsakCgYEArNeZ+UmQLl9zCskNaUP45xnqLebGgj6csovg' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'ui+mj7CbUIuJruXjOtN6fhcvagc8uruXf8G9VA1PjATfZ/1n70ajxF2a0N85mH0g' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'iJwlzTCV9Cg0shXwYjWiA+z4PR+/Y/P4OXtFXFSyIcrEsV6GPtiD1kNDddvXwgQK' >> /home/vsts/.oci/oci_api_key.pem
+    printf '6pOJlpUCgYEAr9G1JJQzp6YEAfp3UdrKijBTbfl0v2VOx3Yka6moF4IORODLQbfy' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'HnEOaDFPf060ef9HEGc3Ki0V1XcZucM7mGosh9ne29onzinExDLjIW2w7hzNcfbW' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
     echo '-----END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
 
     kubectl config view
