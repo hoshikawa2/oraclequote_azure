@@ -97,6 +97,7 @@ steps:
     echo 'fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
     echo '-----END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
 
+    sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
     kubectl config view
     kubectl get nodes
     kubectl replace -f ./callPDFReport/kubernetes.yaml --force
