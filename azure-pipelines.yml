@@ -83,3 +83,4 @@ steps:
     kubectl get services callpdfreport-service
     kubectl get pods
     kubectl describe pods
+  displayName: 'Deploying to OKE'
