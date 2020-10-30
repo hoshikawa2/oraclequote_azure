@@ -45,6 +45,42 @@ steps:
     echo '          command: oci' >> /home/vsts/.kube/config
     echo '          env: []' >> /home/vsts/.kube/config
 
+    mkdir /home/vsts/.oci
+    echo '[DEFAULT]' >> /home/vsts/.oci/config
+    echo 'user=ocid1.user.oc1..aaaaaaaat2tcthdxahoekkhnaaxtybu235pv42uvg4phwp6u7s6p7snhdnqq' >> /home/vsts/.oci/config
+    echo 'fingerprint=3a:6e:91:fd:06:42:df:41:af:47:7a:d6:28:6b:e4:1f' >> /home/vsts/.oci/config
+    echo 'key_file=/home/vsts/.oci/oci_api_key.pem' >> /home/vsts/.oci/config
+    echo 'tenancy=ocid1.tenancy.oc1..aaaaaaaarmf64ufoolro2kzrupzyazqycjapqsyacn7rju64jyw4zbyb6j6q' >> /home/vsts/.oci/config
+    echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
+
+    echo '-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz
+DTuc2n7j+lcYgGF4U1o1w19TeOlDn4rZwGNJYtKCmbZlKRN3MTtI4DrDerP8VyNo
+FZviOjxkD322xt7GzRB+BRUZM7s0ZjF78110F/qfpYZy3DXCs5ugSZ6YCrEjJ9gu
+SQENN8CIEoftOtSUFyVKffdbYXZfIrEWV4DxWye0/J5Zp2RuezDoC/c5kY5ABWL9
+0KV+PSf4G/eqzezKzl5m71dxL0Qck4YG5yVegmrb1OCSpEzH/ce5Ainy5AGXI4aL
+WCCvrhXLrDFikfYQuJYdO/dAfhn/zPn/kO9efQIDAQABAoIBAQCyh2uI6zam9FbL
+/yPrMtgMiYYZq8tVbRfRNj3NN/F3JVtg2d3n0mxELxmre4Q2LHeKnsz2yJCwp2bN
+h0Is7LY31xy0C5S2v/JaQhLXpS38GZJ9O3ZI7OgqMmdDEtF52ExQ0PRXP3MG70vn
+2x9k1j+91iOXAxDCA2bwnK500FDdrAQ6sl6uEQgf5GOOSy1/MbLoZGnxuQgyhd0R
+YvIjAhhb0wpDTtlIOFsmoiZmlGvWXEIm4NBkDc0VN7mQWPrBZ6vgVj8TOp3x7jEr
+OBdJKA2H2fb8z2K9wGR9cdfB1eh3Aa6/oL36ktJJVB73ZpmP2/nOKXEUbmeQfBxM
+mOr2l20ZAoGBAOKSJ6IF/TmEZDVNLGkGDMguZzOoyiWvgY7J/0zNCCjoTu9eNpTx
+jD2/8KjuycNiqorWVlo/jWiM1srYaU4/PmDmky3wmYkcS0KwWr4DVN6nz+enON8D
+MDjq4jf/IaKSj+85oGtvVuF1YVDjCFGzV3OJd24osJoyQPhqJR8cOeynAoGBANZ2
+x8puOV3mlw65onelWvh2WLI2hOe0EvdnjcybJBsPiLwXHtjsOb0qZZPse/ftp1AA
+3SXq/UjmQumAxw3MSysA/mpEw0zy0aJBjbNic2tUg9FsNuqApZt3kovzxHPH9Ccj
+0abktOuurp1GPh4fxiKtjIri7+KHIzTqsCp9Ugw7AoGAcnygAkM8fb/kUvq4Iimo
+c87e3z+/ReO1d82ib9B6+xDIMjRNKF4WG23N0c83rL9Cpf1AjUHn1pi0QLOyIpPa
+lWRtop0dOCdP8Fbkw3czf38Uk13wYuBdkaU+wkTtXhTpHlzkLuWH5U1G63SNU5tn
+6T3hV4zAEGqsYdpg/6NnsakCgYEArNeZ+UmQLl9zCskNaUP45xnqLebGgj6csovg
+ui+mj7CbUIuJruXjOtN6fhcvagc8uruXf8G9VA1PjATfZ/1n70ajxF2a0N85mH0g
+iJwlzTCV9Cg0shXwYjWiA+z4PR+/Y/P4OXtFXFSyIcrEsV6GPtiD1kNDddvXwgQK
+6pOJlpUCgYEAr9G1JJQzp6YEAfp3UdrKijBTbfl0v2VOx3Yka6moF4IORODLQbfy
+HnEOaDFPf060ef9HEGc3Ki0V1XcZucM7mGosh9ne29onzinExDLjIW2w7hzNcfbW
+fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=
+-----END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
+
     kubectl config view
     kubectl get nodes
     kubectl replace -f ./callPDFReport/kubernetes.yaml --force
