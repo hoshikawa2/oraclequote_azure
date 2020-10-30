@@ -15,7 +15,8 @@ steps:
   displayName: 'Sending Image to OCIR'
 
 - script: |
-    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)" --accept-all-defaults
+    Shell
+    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 
     mkdir /home/vsts/.kube
     echo '    apiVersion: v1' >> /home/vsts/.kube/config
