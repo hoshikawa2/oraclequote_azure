@@ -15,34 +15,34 @@ steps:
   displayName: 'Sending Image to OCIR'
 
 - script: |
-echo '    apiVersion: v1' >> /home/vsts/.kube/config
-echo '    clusters:' >> /home/vsts/.kube/config
-echo '    - cluster:' >> /home/vsts/.kube/config
-echo '        certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURqRENDQW5TZ0F3SUJBZ0lVRk84N0EyamNuTktLUGV3eFZpZDBtTnhPZGNnd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1hqRUxNQWtHQTFVRUJoTUNWVk14RGpBTUJnTlZCQWdUQlZSbGVHRnpNUTh3RFFZRFZRUUhFd1pCZFhOMAphVzR4RHpBTkJnTlZCQW9UQms5eVlXTnNaVEVNTUFvR0ExVUVDeE1EVDBSWU1ROHdEUVlEVlFRREV3WkxPRk1nClEwRXdIaGNOTWpBd05ERTVNREV4TkRBd1doY05NalV3TkRFNE1ERXhOREF3V2pCZU1Rc3dDUVlEVlFRR0V3SlYKVXpFT01Bd0dBMVVFQ0JNRlZHVjRZWE14RHpBTkJnTlZCQWNUQmtGMWMzUnBiakVQTUEwR0ExVUVDaE1HVDNKaApZMnhsTVF3d0NnWURWUVFMRXdOUFJGZ3hEekFOQmdOVkJBTVRCa3M0VXlCRFFUQ0NBU0l3RFFZSktvWklodmNOCkFRRUJCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFOallqNXQ4UWg0VWwwQmIrVzJDK3E3eGFwZjU1eGhyMFFoUGVMblMKNkJ4OVR6dlNBbkxmOGhXR0gwUDBuWEdVT21rQUxFbEJQNzNIbzR1ekhmSW9VZlFLOTAwbitxKzlCb1B2eVhCMgp6eGF5aWFISlFGSUtDTUFZNFRyN1hRdjJaNEc3a252VTFTNEFPZnlHTFhSeG1uZUpHL0o0b2VydExRQmZ6NGxUCnRDeFBIY0MyeWp1RkRUcE9ZdndIMC9OZ25kR3VNSEZrMFNmQnBGMFFUbjNpajZzditvL2YxME1FOWkyMlZEcXEKK1VyZWZFSHZCSHRmZ0JQcnp1Mm9wMFZBS0xDWjFXeS94SXFJRnAxZWFZb2tuWC81NVZmOEVJY2V3T2xhdmpQZgo0MWRuMVRIMzZIT09MWTZ6OE5ndEFiNzFXNHJSWHE3aEdZQVp4ZXJoR2NEcGdBY0NBd0VBQWFOQ01FQXdEZ1lEClZSMFBBUUgvQkFRREFnRUdNQThHQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGUEJSVUU3MkxEd1IKNVFxZXhVWURndVI3dDJMU01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRRFJjMGcwMHB5VVNRYUxOMG1QSjVMRgpuQkRqT0xIOVZDcStSMFZqRTNBc3Y5N05ZNW82QjY4UW91cVRuQ0JRcHNpNHZXVWZGSk9JVW1DVHFBZGhCN2puCjc4VDQ3c0dPdmtiNFFpSVBXZE5PQUZBdEFrNnZFWjdlTUZyMklNRXgwV2hmYVhUK2pva25oc0prc0R5YkpNeVkKUHZzWUFxWE9MNDhiVUhZVk1GOTFaeERaZEx1ZTF3emtnbUo2VTA5Z0RvWkd2Y2J0WEdRUmtBUU9lOGdNOGdDcgpUeFc1S0hvbTMxMW1nRUJLSGxqMjJYS1U1SloyRVpkZ2tyVXpyVHR4Zjdvb2x0WVp0eXkwNXlzY2ZXbk56NWNjCkR3VDB1cDk1S1dIZHB4ZXFINGJCZlU5dTM4ZjdVVmU3TkorZ2dTTGE5V0JxanErYzcyOXB2c2I4MHV4RGhJTWkKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=' >> /home/vsts/.kube/config
-echo '        server: https://147.154.9.27:6443' >> /home/vsts/.kube/config
-echo '      name: cluster-c2tkm3egjrw' >> /home/vsts/.kube/config
-echo '    contexts:' >> /home/vsts/.kube/config
-echo '    - context:' >> /home/vsts/.kube/config
-echo '        cluster: cluster-c2tkm3egjrw' >> /home/vsts/.kube/config
-echo '        user: user-c2tkm3egjrw' >> /home/vsts/.kube/config
-echo '      name: context-c2tkm3egjrw' >> /home/vsts/.kube/config
-echo '    current-context: context-c2tkm3egjrw' >> /home/vsts/.kube/config
-echo '    kind: ""' >> /home/vsts/.kube/config
-echo '    users:' >> /home/vsts/.kube/config
-echo '    - name: user-c2tkm3egjrw' >> /home/vsts/.kube/config
-echo '      user:' >> /home/vsts/.kube/config
-echo '        exec:' >> /home/vsts/.kube/config
-echo '          apiVersion: client.authentication.k8s.io/v1beta1' >> /home/vsts/.kube/config
-echo '          args:' >> /home/vsts/.kube/config
-echo '          - ce' >> /home/vsts/.kube/config
-echo '          - cluster' >> /home/vsts/.kube/config
-echo '          - generate-token' >> /home/vsts/.kube/config
-echo '          - --cluster-id' >> /home/vsts/.kube/config
-echo '          - ocid1.cluster.oc1.iad.aaaaaaaaaezdonldgvtgiojrgq2gim3bgnrwcyjsgezdcnjzgc2tkm3egjrw' >> /home/vsts/.kube/config
-echo '          - --region' >> /home/vsts/.kube/config
-echo '          - us-ashburn-1' >> /home/vsts/.kube/config
-echo '          command: oci' >> /home/vsts/.kube/config
-echo '          env: []' >> /home/vsts/.kube/config
+    echo '    apiVersion: v1' >> /home/vsts/.kube/config
+    echo '    clusters:' >> /home/vsts/.kube/config
+    echo '    - cluster:' >> /home/vsts/.kube/config
+    echo '        certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURqRENDQW5TZ0F3SUJBZ0lVRk84N0EyamNuTktLUGV3eFZpZDBtTnhPZGNnd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1hqRUxNQWtHQTFVRUJoTUNWVk14RGpBTUJnTlZCQWdUQlZSbGVHRnpNUTh3RFFZRFZRUUhFd1pCZFhOMAphVzR4RHpBTkJnTlZCQW9UQms5eVlXTnNaVEVNTUFvR0ExVUVDeE1EVDBSWU1ROHdEUVlEVlFRREV3WkxPRk1nClEwRXdIaGNOTWpBd05ERTVNREV4TkRBd1doY05NalV3TkRFNE1ERXhOREF3V2pCZU1Rc3dDUVlEVlFRR0V3SlYKVXpFT01Bd0dBMVVFQ0JNRlZHVjRZWE14RHpBTkJnTlZCQWNUQmtGMWMzUnBiakVQTUEwR0ExVUVDaE1HVDNKaApZMnhsTVF3d0NnWURWUVFMRXdOUFJGZ3hEekFOQmdOVkJBTVRCa3M0VXlCRFFUQ0NBU0l3RFFZSktvWklodmNOCkFRRUJCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFOallqNXQ4UWg0VWwwQmIrVzJDK3E3eGFwZjU1eGhyMFFoUGVMblMKNkJ4OVR6dlNBbkxmOGhXR0gwUDBuWEdVT21rQUxFbEJQNzNIbzR1ekhmSW9VZlFLOTAwbitxKzlCb1B2eVhCMgp6eGF5aWFISlFGSUtDTUFZNFRyN1hRdjJaNEc3a252VTFTNEFPZnlHTFhSeG1uZUpHL0o0b2VydExRQmZ6NGxUCnRDeFBIY0MyeWp1RkRUcE9ZdndIMC9OZ25kR3VNSEZrMFNmQnBGMFFUbjNpajZzditvL2YxME1FOWkyMlZEcXEKK1VyZWZFSHZCSHRmZ0JQcnp1Mm9wMFZBS0xDWjFXeS94SXFJRnAxZWFZb2tuWC81NVZmOEVJY2V3T2xhdmpQZgo0MWRuMVRIMzZIT09MWTZ6OE5ndEFiNzFXNHJSWHE3aEdZQVp4ZXJoR2NEcGdBY0NBd0VBQWFOQ01FQXdEZ1lEClZSMFBBUUgvQkFRREFnRUdNQThHQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGUEJSVUU3MkxEd1IKNVFxZXhVWURndVI3dDJMU01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRRFJjMGcwMHB5VVNRYUxOMG1QSjVMRgpuQkRqT0xIOVZDcStSMFZqRTNBc3Y5N05ZNW82QjY4UW91cVRuQ0JRcHNpNHZXVWZGSk9JVW1DVHFBZGhCN2puCjc4VDQ3c0dPdmtiNFFpSVBXZE5PQUZBdEFrNnZFWjdlTUZyMklNRXgwV2hmYVhUK2pva25oc0prc0R5YkpNeVkKUHZzWUFxWE9MNDhiVUhZVk1GOTFaeERaZEx1ZTF3emtnbUo2VTA5Z0RvWkd2Y2J0WEdRUmtBUU9lOGdNOGdDcgpUeFc1S0hvbTMxMW1nRUJLSGxqMjJYS1U1SloyRVpkZ2tyVXpyVHR4Zjdvb2x0WVp0eXkwNXlzY2ZXbk56NWNjCkR3VDB1cDk1S1dIZHB4ZXFINGJCZlU5dTM4ZjdVVmU3TkorZ2dTTGE5V0JxanErYzcyOXB2c2I4MHV4RGhJTWkKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=' >> /home/vsts/.kube/config
+    echo '        server: https://147.154.9.27:6443' >> /home/vsts/.kube/config
+    echo '      name: cluster-c2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '    contexts:' >> /home/vsts/.kube/config
+    echo '    - context:' >> /home/vsts/.kube/config
+    echo '        cluster: cluster-c2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '        user: user-c2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '      name: context-c2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '    current-context: context-c2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '    kind: ""' >> /home/vsts/.kube/config
+    echo '    users:' >> /home/vsts/.kube/config
+    echo '    - name: user-c2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '      user:' >> /home/vsts/.kube/config
+    echo '        exec:' >> /home/vsts/.kube/config
+    echo '          apiVersion: client.authentication.k8s.io/v1beta1' >> /home/vsts/.kube/config
+    echo '          args:' >> /home/vsts/.kube/config
+    echo '          - ce' >> /home/vsts/.kube/config
+    echo '          - cluster' >> /home/vsts/.kube/config
+    echo '          - generate-token' >> /home/vsts/.kube/config
+    echo '          - --cluster-id' >> /home/vsts/.kube/config
+    echo '          - ocid1.cluster.oc1.iad.aaaaaaaaaezdonldgvtgiojrgq2gim3bgnrwcyjsgezdcnjzgc2tkm3egjrw' >> /home/vsts/.kube/config
+    echo '          - --region' >> /home/vsts/.kube/config
+    echo '          - us-ashburn-1' >> /home/vsts/.kube/config
+    echo '          command: oci' >> /home/vsts/.kube/config
+    echo '          env: []' >> /home/vsts/.kube/config
 
     kubectl config view
     kubectl get nodes
