@@ -15,12 +15,18 @@ steps:
   displayName: 'Sending Image to OCIR'
 
 - script: |
-    sudo apt-get update
-    sudo apt-get --assume-yes install python3-pip
-    sudo pip3 install --upgrade pip
-    sudo apt-get --assume-yes install build-essential libssl1.0-dev libffi-dev python-dev
-
-    sudo bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+    sudo apt update
+    sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+    wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz
+    tar -xf Python-3.8.3.tgz
+    cd Python-3.8.3
+    ./configure --enable-optimizations
+    sudo make altinstall
+    python3.8 -m venv oracle-cli
+    source oracle-cli/bin/activate
+    pip install oci_cli-*-py2.py3-none-any.whl
+    
+    ##sudo bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 
     mkdir /home/vsts/.kube
     echo '    apiVersion: v1' >> /home/vsts/.kube/config
