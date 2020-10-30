@@ -53,8 +53,8 @@ steps:
     echo 'tenancy=ocid1.tenancy.oc1..aaaaaaaarmf64ufoolro2kzrupzyazqycjapqsyacn7rju64jyw4zbyb6j6q' >> /home/vsts/.oci/config
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
 
-    echo '-----BEGIN RSA PRIVATE KEY-----
-MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz
+    echo '-----BEGIN RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
+    echo 'MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz
 DTuc2n7j+lcYgGF4U1o1w19TeOlDn4rZwGNJYtKCmbZlKRN3MTtI4DrDerP8VyNo
 FZviOjxkD322xt7GzRB+BRUZM7s0ZjF78110F/qfpYZy3DXCs5ugSZ6YCrEjJ9gu
 SQENN8CIEoftOtSUFyVKffdbYXZfIrEWV4DxWye0/J5Zp2RuezDoC/c5kY5ABWL9
@@ -78,8 +78,8 @@ ui+mj7CbUIuJruXjOtN6fhcvagc8uruXf8G9VA1PjATfZ/1n70ajxF2a0N85mH0g
 iJwlzTCV9Cg0shXwYjWiA+z4PR+/Y/P4OXtFXFSyIcrEsV6GPtiD1kNDddvXwgQK
 6pOJlpUCgYEAr9G1JJQzp6YEAfp3UdrKijBTbfl0v2VOx3Yka6moF4IORODLQbfy
 HnEOaDFPf060ef9HEGc3Ki0V1XcZucM7mGosh9ne29onzinExDLjIW2w7hzNcfbW
-fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=
------END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
+fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
+    echo '-----END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
 
     kubectl config view
     kubectl get nodes
