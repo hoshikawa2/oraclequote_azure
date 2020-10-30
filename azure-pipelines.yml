@@ -24,6 +24,9 @@ steps:
     sudo make altinstall
     python3.8 -m venv oracle-cli
     source oracle-cli/bin/activate
+    wget https://github.com/oracle/oci-cli/releases/download/v2.14.3/oci-cli-2.14.3.zip
+    unzip oci-cli-2.14.3.zip
+
     pip install oci_cli-*-py2.py3-none-any.whl
     
     ##sudo bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
