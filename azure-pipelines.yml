@@ -20,6 +20,7 @@ steps:
     version: '3.6'
 
 - script: |
+    cd /home
     bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 
     mkdir /home/vsts/.kube
