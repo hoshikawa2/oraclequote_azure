@@ -70,7 +70,7 @@ steps:
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
 
     echo '-----BEGIN RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
-    echo 'MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz' >> /home/vsts/.oci/oci_api_key.pem
+    printf 'MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz' >> /home/vsts/.oci/oci_api_key.pem
     printf 'DTuc2n7j+lcYgGF4U1o1w19TeOlDn4rZwGNJYtKCmbZlKRN3MTtI4DrDerP8VyNo' >> /home/vsts/.oci/oci_api_key.pem
     printf 'FZviOjxkD322xt7GzRB+BRUZM7s0ZjF78110F/qfpYZy3DXCs5ugSZ6YCrEjJ9gu' >> /home/vsts/.oci/oci_api_key.pem
     printf 'SQENN8CIEoftOtSUFyVKffdbYXZfIrEWV4DxWye0/J5Zp2RuezDoC/c5kY5ABWL9' >> /home/vsts/.oci/oci_api_key.pem
@@ -94,7 +94,7 @@ steps:
     printf 'iJwlzTCV9Cg0shXwYjWiA+z4PR+/Y/P4OXtFXFSyIcrEsV6GPtiD1kNDddvXwgQK' >> /home/vsts/.oci/oci_api_key.pem
     printf '6pOJlpUCgYEAr9G1JJQzp6YEAfp3UdrKijBTbfl0v2VOx3Yka6moF4IORODLQbfy' >> /home/vsts/.oci/oci_api_key.pem
     printf 'HnEOaDFPf060ef9HEGc3Ki0V1XcZucM7mGosh9ne29onzinExDLjIW2w7hzNcfbW' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
+    echo 'fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
     echo '-----END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
 
     kubectl config view
