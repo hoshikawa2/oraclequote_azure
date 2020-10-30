@@ -14,14 +14,9 @@ steps:
     docker push $(ocir)/$(tenancy)/$(repo)/$(imageName)
   displayName: 'Sending Image to OCIR'
 
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '3.6'
-
 - script: |
     cd /home
-    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+    sudo bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 
     mkdir /home/vsts/.kube
     echo '    apiVersion: v1' >> /home/vsts/.kube/config
