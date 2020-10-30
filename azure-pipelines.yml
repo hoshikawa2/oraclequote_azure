@@ -15,6 +15,7 @@ steps:
   displayName: 'Sending Image to OCIR'
 
 - script: |
+    mkdir /home/vsts/.kube
     echo '    apiVersion: v1' >> /home/vsts/.kube/config
     echo '    clusters:' >> /home/vsts/.kube/config
     echo '    - cluster:' >> /home/vsts/.kube/config
