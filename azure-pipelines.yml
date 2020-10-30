@@ -103,7 +103,7 @@ steps:
 
     kubectl config view
     kubectl get nodes
-    kubectl replace -f ./callPDFReport/kubernetes.yaml --force
+    kubectl replace -f kubernetes.yaml --force
     sleep 120
     kubectl get services callpdfreport-service
     kubectl get pods
