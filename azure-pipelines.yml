@@ -1,5 +1,5 @@
 pool:
-  vmImage: 'Oracle:Oracle-Linux:81:8.1.2'
+  vmImage: 'Oracle-Linux:81:8.1.2'
 
 variables:
   buildConfiguration: 'Release'
