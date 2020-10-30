@@ -73,7 +73,7 @@ steps:
     oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaaaezdonldgvtgiojrgq2gim3bgnrwcyjsgezdcnjzgc2tkm3egjrw --file /home/vsts/.kube/config --region us-ashburn-1 --token-version 2.0.0 
     export KUBECONFIG=/home/vsts/.kube/config
 
-    cd ../
+    cd /home/vsts/work/1/s/.git/oraclequote_azure
     kubectl config view
     kubectl get nodes
     kubectl replace -f kubernetes.yaml --force
