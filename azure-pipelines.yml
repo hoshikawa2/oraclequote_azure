@@ -18,7 +18,7 @@ steps:
     sudo apt-get update
     sudo apt-get --assume-yes install python3-pip
     sudo pip3 install --upgrade pip
-    sudo apt-get --assume-yes install build-essential libssl-dev libffi-dev python-dev
+    sudo apt-get --assume-yes install build-essential libssl1.0-dev libffi-dev python-dev
 
     sudo bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 
