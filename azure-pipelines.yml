@@ -37,42 +37,20 @@ steps:
 
     mkdir /home/vsts/.oci
     echo '[DEFAULT]' >> /home/vsts/.oci/config
-    echo 'user=ocid1.user.oc1..aaaaaaaat2tcthdxahoekkhnaaxtybu235pv42uvg4phwp6u7s6p7snhdnqq' >> /home/vsts/.oci/config
-    echo 'fingerprint=3a:6e:91:fd:06:42:df:41:af:47:7a:d6:28:6b:e4:1f' >> /home/vsts/.oci/config
+    echo 'user=ocid1.user.oc1..aaaaaaaa5qt6x2bhe3pqawphnt75xtdpmntisfgxeizqsol4f3kxmlcmphda' >> /home/vsts/.oci/config
+    echo 'fingerprint=34:36:4e:62:0c:c3:1f:80:5b:b0:18:80:d5:e9:73:1c' >> /home/vsts/.oci/config
     echo 'key_file=/home/vsts/.oci/oci_api_key.pem' >> /home/vsts/.oci/config
     echo 'tenancy=ocid1.tenancy.oc1..aaaaaaaarmf64ufoolro2kzrupzyazqycjapqsyacn7rju64jyw4zbyb6j6q' >> /home/vsts/.oci/config
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
 
-    echo '-----BEGIN RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'MIIEpQIBAAKCAQEAvc9NUntgO/tfXOTyaaoDTaBXl40hwKB2AUVkis0JfXDlzbyz' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'DTuc2n7j+lcYgGF4U1o1w19TeOlDn4rZwGNJYtKCmbZlKRN3MTtI4DrDerP8VyNo' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'FZviOjxkD322xt7GzRB+BRUZM7s0ZjF78110F/qfpYZy3DXCs5ugSZ6YCrEjJ9gu' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'SQENN8CIEoftOtSUFyVKffdbYXZfIrEWV4DxWye0/J5Zp2RuezDoC/c5kY5ABWL9' >> /home/vsts/.oci/oci_api_key.pem
-    printf '0KV+PSf4G/eqzezKzl5m71dxL0Qck4YG5yVegmrb1OCSpEzH/ce5Ainy5AGXI4aL' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'WCCvrhXLrDFikfYQuJYdO/dAfhn/zPn/kO9efQIDAQABAoIBAQCyh2uI6zam9FbL' >> /home/vsts/.oci/oci_api_key.pem
-    printf '/yPrMtgMiYYZq8tVbRfRNj3NN/F3JVtg2d3n0mxELxmre4Q2LHeKnsz2yJCwp2bN' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'h0Is7LY31xy0C5S2v/JaQhLXpS38GZJ9O3ZI7OgqMmdDEtF52ExQ0PRXP3MG70vn' >> /home/vsts/.oci/oci_api_key.pem
-    printf '2x9k1j+91iOXAxDCA2bwnK500FDdrAQ6sl6uEQgf5GOOSy1/MbLoZGnxuQgyhd0R' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'YvIjAhhb0wpDTtlIOFsmoiZmlGvWXEIm4NBkDc0VN7mQWPrBZ6vgVj8TOp3x7jEr' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'OBdJKA2H2fb8z2K9wGR9cdfB1eh3Aa6/oL36ktJJVB73ZpmP2/nOKXEUbmeQfBxM' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'mOr2l20ZAoGBAOKSJ6IF/TmEZDVNLGkGDMguZzOoyiWvgY7J/0zNCCjoTu9eNpTx' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'jD2/8KjuycNiqorWVlo/jWiM1srYaU4/PmDmky3wmYkcS0KwWr4DVN6nz+enON8D' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'MDjq4jf/IaKSj+85oGtvVuF1YVDjCFGzV3OJd24osJoyQPhqJR8cOeynAoGBANZ2' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'x8puOV3mlw65onelWvh2WLI2hOe0EvdnjcybJBsPiLwXHtjsOb0qZZPse/ftp1AA' >> /home/vsts/.oci/oci_api_key.pem
-    printf '3SXq/UjmQumAxw3MSysA/mpEw0zy0aJBjbNic2tUg9FsNuqApZt3kovzxHPH9Ccj' >> /home/vsts/.oci/oci_api_key.pem
-    printf '0abktOuurp1GPh4fxiKtjIri7+KHIzTqsCp9Ugw7AoGAcnygAkM8fb/kUvq4Iimo' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'c87e3z+/ReO1d82ib9B6+xDIMjRNKF4WG23N0c83rL9Cpf1AjUHn1pi0QLOyIpPa' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'lWRtop0dOCdP8Fbkw3czf38Uk13wYuBdkaU+wkTtXhTpHlzkLuWH5U1G63SNU5tn' >> /home/vsts/.oci/oci_api_key.pem
-    printf '6T3hV4zAEGqsYdpg/6NnsakCgYEArNeZ+UmQLl9zCskNaUP45xnqLebGgj6csovg' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'ui+mj7CbUIuJruXjOtN6fhcvagc8uruXf8G9VA1PjATfZ/1n70ajxF2a0N85mH0g' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'iJwlzTCV9Cg0shXwYjWiA+z4PR+/Y/P4OXtFXFSyIcrEsV6GPtiD1kNDddvXwgQK' >> /home/vsts/.oci/oci_api_key.pem
-    printf '6pOJlpUCgYEAr9G1JJQzp6YEAfp3UdrKijBTbfl0v2VOx3Yka6moF4IORODLQbfy' >> /home/vsts/.oci/oci_api_key.pem
-    printf 'HnEOaDFPf060ef9HEGc3Ki0V1XcZucM7mGosh9ne29onzinExDLjIW2w7hzNcfbW' >> /home/vsts/.oci/oci_api_key.pem
-    echo 'fyx0Ha+kGzMggoRO4oxwKDfzJ9N3YPuOp1aA3m9vI48cagBKTMD2lwc=' >> /home/vsts/.oci/oci_api_key.pem
-    echo '-----END RSA PRIVATE KEY-----' >> /home/vsts/.oci/oci_api_key.pem
+    cd /home/vsts/.oci/
+    wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem
 
     sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
-    oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaaaezdonldgvtgiojrgq2gim3bgnrwcyjsgezdcnjzgc2tkm3egjrw --file /home/vsts/.kube/config --region us-ashburn-1 --token-version 2.0.0 
+    oci resource-manager job create-destroy-job --execution-plan-strategy AUTO_APPROVED --stack-id ocid1.ormstack.oc1.iad.amaaaaaaihuwreyaoaanscej56cowg2smdsrt5esdpz4uq7otrbyenyrnz7a
+
+    oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaa5bqos533gvotyizyukjfwyf4uvjtbl2vl7uf2llq2cl7fe57zvwa --file /home/vsts/.kube/config --region us-ashburn-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+
     export KUBECONFIG=/home/vsts/.kube/config
 
     cd /home/vsts/work/1/s
@@ -83,4 +61,4 @@ steps:
     kubectl get services callpdfreport-service
     kubectl get pods
     kubectl describe pods
-  displayName: 'Deploying to OKE'
+  displayName: 'Deploying to OKE and OCI Resource Manager'
