@@ -44,7 +44,7 @@ steps:
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
 
     cd /home/vsts/.oci/
-    wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem
+    wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem?rlkey=60pu68fklor99ifbnr8jkfood&dl=0
 
     sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
     oci resource-manager job create-destroy-job --execution-plan-strategy AUTO_APPROVED --stack-id ocid1.ormstack.oc1.iad.amaaaaaaihuwreyaoaanscej56cowg2smdsrt5esdpz4uq7otrbyenyrnz7a
