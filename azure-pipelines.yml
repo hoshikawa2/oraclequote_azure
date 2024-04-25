@@ -21,6 +21,9 @@ steps:
     mkdir /home/vsts/.kube
 
     mkdir /home/vsts/.oci
+    wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem?rlkey=60pu68fklor99ifbnr8jkfood&dl=0
+    sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
+
     echo '[DEFAULT]' > /home/vsts/.oci/config
     echo 'user=ocid1.user.oc1..aaaaaaaat2tcthdxahoekkhnaaxtybu235pv42uvg4phwp6u7s6p7snhdnqq' >> /home/vsts/.oci/config
     echo 'fingerprint=a0:6c:fe:9d:da:7b:fa:00:90:70:db:b6:2c:3f:4b:9d' >> /home/vsts/.oci/config
@@ -29,10 +32,6 @@ steps:
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
     chmod 600 /home/vsts/.oci/config
 
-    cd /home/vsts/.oci/
-    wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem?rlkey=60pu68fklor99ifbnr8jkfood&dl=0
-
-    sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
     oci resource-manager job create-destroy-job --execution-plan-strategy AUTO_APPROVED --stack-id ocid1.ormstack.oc1.iad.amaaaaaaihuwreyaoaanscej56cowg2smdsrt5esdpz4uq7otrbyenyrnz7a
 
     oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaa5bqos533gvotyizyukjfwyf4uvjtbl2vl7uf2llq2cl7fe57zvwa --file /home/vsts/.kube/config --region us-ashburn-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
