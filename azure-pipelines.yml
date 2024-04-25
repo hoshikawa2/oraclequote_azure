@@ -21,6 +21,7 @@ steps:
     mkdir /home/vsts/.kube
 
     mkdir /home/vsts/.oci
+    cd /home/vsts/.oci
     wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem?rlkey=60pu68fklor99ifbnr8jkfood&dl=0
     sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
 
