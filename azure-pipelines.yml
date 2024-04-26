@@ -18,7 +18,7 @@ steps:
 
 - script: |
     pip install oci-cli
-  displayName: 'OCI CLI installed'
+  displayName: 'OCI CLI Install'
 
 - script: |
     mkdir /home/vsts/.kube
@@ -37,11 +37,11 @@ steps:
     echo 'tenancy=ocid1.tenancy.oc1..aaaaaaaarmf64ufoolro2kzrupzyazqycjapqsyacn7rju64jyw4zbyb6j6q' >> /home/vsts/.oci/config
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
     chmod 600 /home/vsts/.oci/config
-  displayName: 'OCI CLI Configured'
+  displayName: 'OCI CLI Configuration'
 
 - script: |
     oci resource-manager job create-apply-job --execution-plan-strategy AUTO_APPROVED --stack-id ocid1.ormstack.oc1.iad.amaaaaaaihuwreyaoaanscej56cowg2smdsrt5esdpz4uq7otrbyenyrnz7a
-  displayName: 'Weblogic Terraform Resource Manager Executed'
+  displayName: 'Weblogic Terraform Resource Manager'
 
 - script: |
     oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaa5bqos533gvotyizyukjfwyf4uvjtbl2vl7uf2llq2cl7fe57zvwa --file /home/vsts/.kube/config --region us-ashburn-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
