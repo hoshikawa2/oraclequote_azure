@@ -18,10 +18,15 @@ steps:
 
 - script: |
     pip install oci-cli
+  displayName: 'OCI CLI installed'
+
+- script: |
     mkdir /home/vsts/.kube
 
     mkdir /home/vsts/.oci
     cd /home/vsts/.oci
+    # Obtain your OCI User Private Key
+    # wget -O oci_api_key.pem https://----your_bucket_url/....
     wget -O oci_api_key.pem https://www.dropbox.com/scl/fi/3yjruq1imww3nkzvgby4v/oci_api_key.pem?rlkey=60pu68fklor99ifbnr8jkfood&dl=0
     sudo chmod 600 /home/vsts/.oci/oci_api_key.pem
 
@@ -32,9 +37,13 @@ steps:
     echo 'tenancy=ocid1.tenancy.oc1..aaaaaaaarmf64ufoolro2kzrupzyazqycjapqsyacn7rju64jyw4zbyb6j6q' >> /home/vsts/.oci/config
     echo 'region=us-ashburn-1' >> /home/vsts/.oci/config
     chmod 600 /home/vsts/.oci/config
+  displayName: 'OCI CLI Configured'
 
-    oci resource-manager job create-destroy-job --execution-plan-strategy AUTO_APPROVED --stack-id ocid1.ormstack.oc1.iad.amaaaaaaihuwreyaoaanscej56cowg2smdsrt5esdpz4uq7otrbyenyrnz7a
+- script: |
+    oci resource-manager job create-apply-job --execution-plan-strategy AUTO_APPROVED --stack-id ocid1.ormstack.oc1.iad.amaaaaaaihuwreyaoaanscej56cowg2smdsrt5esdpz4uq7otrbyenyrnz7a
+  displayName: 'Weblogic Terraform Resource Manager Executed'
 
+- script: |
     oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.iad.aaaaaaaa5bqos533gvotyizyukjfwyf4uvjtbl2vl7uf2llq2cl7fe57zvwa --file /home/vsts/.kube/config --region us-ashburn-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
 
     export KUBECONFIG=/home/vsts/.kube/config
@@ -47,4 +56,4 @@ steps:
     kubectl get services callpdfreport-service
     kubectl get pods
     kubectl describe pods
-  displayName: 'Deploying to OKE and OCI Resource Manager'
+  displayName: 'Deploying to OKE'
